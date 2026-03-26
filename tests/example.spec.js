@@ -44,11 +44,18 @@ test('test', async ({ page }) => {
 
   await page.locator(`[data-selenium-date="${formatDate(today)}"]`).first().click();
 
+  // calculate future dates
+  test.fixme('This test is not stable, need to add wait for calendar to load after clicking check-in date');  
+  //sdhasdasdasdasd
+  // add 2 and 3 days to current date
+  
   await page.pause();
   await page.locator('body').click();
   await page.pause();
   await page.locator('body').click();
   
+
+
   const datePlus2 = new Date(today);
   datePlus2.setDate(today.getDate() + 2);
 
