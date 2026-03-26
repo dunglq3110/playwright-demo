@@ -62,3 +62,11 @@ test('test', async ({ page }) => {
 
   await page.pause();
 });
+
+test.describe('test2', () => {
+  test('test2', async ({ page }) => {
+    await page.goto('https://www.agoda.com');   
+    await page.getByPlaceholder('Enter a destination or property')
+      .fill('Centre Hotel');
+  });
+}
