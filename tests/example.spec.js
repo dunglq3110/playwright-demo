@@ -38,7 +38,7 @@ test('test', async ({ page }) => {
 
   await page.locator('body').click();
 
-  const formatDate = (date) => date.toISOString().split('T')[0];
+  const formatDate = (date) => date.toISOString().split('T')[0]; //ádasdasdasd
 
   const today = new Date();
 
