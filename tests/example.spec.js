@@ -42,6 +42,8 @@ test('test', async ({ page }) => {
 
   const today = new Date();
 
+  await page.locator(`[data-selenium-date="${formatDate(today)}"]`).first().click();
+
   const datePlus2 = new Date(today);
   datePlus2.setDate(today.getDate() + 2);
 
